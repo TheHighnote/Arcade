@@ -20,12 +20,15 @@
         <div class="cell" id="cell-8"></div>
         <div class="cell" id="cell-9"></div>
       </div> 
-    <div id="buttons">
-    <button class="button" onclick="player1Select()">Enter Player 1 Name</button>
-    <button class="button" onclick="player2Select()">Enter Player 2 Name</button>
-    </div>
+    <form>
+        Player 1:
+        <input type = "text" id = "player1" name = "player1"> <br> <br>
+        Player 2:
+        <input type = "text" id = "player2" name = "player2"> <br> <br>
+        <input type = "button" onclick= "startGame()" value = "submit">
+    </form>
     <p id="play1" class="play">Player 1</p>
     <p id="play2" class="play">Player 2</p>
-    <button id="reset" class="button">Reset</button> 
+    <button id="reset" onclick="reset()" class="button">Reset</button> 
 </body>
 </html>
