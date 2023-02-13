@@ -38,15 +38,19 @@ gameArea.addEventListener("click", function(clickEvent){
                 } 
 })
 }
-function userName (e) {
-        let player1 = document.getElementById("player1").value;
-        console.log(player1)
-        let name1 = getElementById("play1")
-        name1.innerHTML = player1
-        let player2 = document.getElementById("player2").value;
-        let name2 = getElementById("play2")
-        name2.innerHTML = player2
-        
+function player1Select() {
+        let person = prompt("Please enter your name", "Player 1");
+        if (person != null) {
+                document.getElementById("play1").innerHTML = person
+        }       
+}
+function player2Select() {
+        let person = prompt("Please enter your name", "Player 2");
+        if (person != "Player 2") {
+                document.getElementById("play2").innerHTML = person
+        }else{
+                document.getElementById("play2").innerHTML = "Computer"
+        }   
 }
 
 

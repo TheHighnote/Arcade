@@ -51,3 +51,11 @@ body{
  .selected{
    color: greenyellow;
  }
+p{
+  font-family: 'Times New Roman', Times, serif;
+   color: #47088b;
+   background-color: #a7a2aa;
+   border: #47088b solid 3px;
+   text-align: center;
+   margin: 5px;
+}
