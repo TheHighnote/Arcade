@@ -1,63 +1,70 @@
-body{
-   background-image: url(space.jpg);
+body {
+  background-image: url(space.jpg);
 }
-.cell{
-    border: 6px solid #47088b;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
-.cell:hover{
-   background-color: #89848c;
+
+.cell {
+  border: 6px solid #47088b;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
- #board{
-    width: 30rem;
-    height: 30rem;
-    margin: 0 auto;
-    background-color: #a7a2aa;
-    color: #47088b;
-    border: 7px solid #47088b;
-    border-radius: 8px;
-    display: grid;
-    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
- }
-.play{
-   font-family: 'Times New Roman', Times, serif;
-   color: #47088b;
-   font-size: 20px;
-   background-color: #a7a2aa;
-   border: #47088b solid 3px;
-   height: fit-content;
-   width: fit-content;
- }
- #buttons{
-   display:flex;
-   justify-content: center;
- }
- .button{
-   font-family: 'Times New Roman', Times, serif;
-   font-size: 20px;
-   color: #47088b;
-   background-color: #a7a2aa;
-   border: #47088b solid 3px;
-   margin: 5px;
- }
- .button:hover{
-   background-color: #89848c;
- }
- .selected{
-   color: greenyellow;
- }
-p{
+
+.cell:hover {
+  background-color: #89848c;
+}
+
+#board {
+  width: 30rem;
+  height: 30rem;
+  margin: 0 auto;
+  background-color: #a7a2aa;
+  color: #47088b;
+  border: 7px solid #47088b;
+  border-radius: 8px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.play {
+  font-family: 'Times New Roman', Times, serif;
+  color: #47088b;
+  font-size: 20px;
+  background-color: #a7a2aa;
+  border: #47088b solid 3px;
+  height: fit-content;
+  width: fit-content;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
   font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
-   color: #47088b;
-   background-color: #a7a2aa;
-   border: #47088b solid 3px;
-   text-align: center;
-   margin: 5px;
- 
- 
+  color: #47088b;
+  background-color: #a7a2aa;
+  border: #47088b solid 3px;
+  margin: 5px;
+}
+
+.button:hover {
+  background-color: #89848c;
+}
+
+.selected {
+  color: greenyellow;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: #47088b;
+  background-color: #a7a2aa;
+  border: #47088b solid 3px;
+  text-align: center;
+  margin: 5px;
 }
