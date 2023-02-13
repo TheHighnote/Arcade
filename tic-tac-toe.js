@@ -9,7 +9,6 @@ console.log(cellArr)
 const getCurrentPlayer = () => {
         if (clickCount % 2 === 0){
                 currentPlayer = "X"
-                console.log(gameArea)
                 console.log('Player 1 turn: ', currentPlayer)
                 playerName2.classList.remove('selected')
                 playerName1.classList.toggle('selected')
@@ -22,16 +21,43 @@ const getCurrentPlayer = () => {
         }
         return currentPlayer
 }
+function reset(){
+        for (const cell of cellArr) {
+          cell.innerHTML = ''
+        }
+          playerName1.innerHTML = 'Player 1'
+          playerName2.innerHTML = 'Player 2'
+  
+  }
+  const winConditions = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]];
+
+function checkWinner() {
+    for (let i = 0; i < winConditions.length; i++) {
+        let winCondition = winConditions[i];
+        let a = cellArr[winCondition[0]];
+        let b = cellArr[winCondition[1]];
+        let c = cellArr[winCondition[2]];
+        if (a.innerHTML!="" && b.innerHTML!="" && c.innerHTML!="" && a.innerHTML == b.innerHTML && b.innerHTML == c.innerHTML) {
+            setTimeout(() => {
+                    alert(`${a.innerHTML} is the winner!`);
+                    reset()
+            }, 200)
+        }
+        
+    }
+}
+
 function startGame () {
 gameArea.addEventListener("click", function(clickEvent){
         if (clickEvent.target.matches(".cell")){
                 if (clickEvent.target.innerHTML == ''){
                         getCurrentPlayer()
                         clickEvent.target.innerHTML=currentPlayer
-                        for (let index = 0; index < cellArr.length; index++) {
-                                const cell = cellArr[index];
-                                console.log(cell.innerHTML)
-                        }
+                        // for (let index = 0; index < cellArr.length; index++) {
+                        //         const cell = cellArr[index];
+                        // }
+                        checkWinner()
+
                         clickCount++}else{
                                 alert("Can't do that!")
                         }                   
@@ -52,18 +78,3 @@ function player2Select() {
                 document.getElementById("play2").innerHTML = "Computer"
         }   
 }
-
-
-
-//loop for if single player to select random place to place marker for player 2 with a time delay
-//function to show the player if its player 1's or player 2's turn
-// let winConditions = [
-//     [cell-1, cell-4, cell-7],
-//     [cell-2, cell-5, cell-8],
-//     [cell-3, cell-6, cell-9],
-//     [cell-3, cell-5, cell-7],
-//     [cell-1, cell-2, cell-3],
-//     [cell-4, cell-5, cell-6],
-//     [cell-7, cell-8, cell-9]
-// ]
-//reset button to start a new game

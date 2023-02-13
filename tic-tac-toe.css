@@ -26,20 +26,19 @@ body{
 .play{
    font-family: 'Times New Roman', Times, serif;
    color: #47088b;
+   font-size: 20px;
    background-color: #a7a2aa;
    border: #47088b solid 3px;
-   display: flex;
-   justify-content: center;
    height: fit-content;
    width: fit-content;
  }
-
  #buttons{
    display:flex;
    justify-content: center;
  }
  .button{
    font-family: 'Times New Roman', Times, serif;
+   font-size: 20px;
    color: #47088b;
    background-color: #a7a2aa;
    border: #47088b solid 3px;
@@ -53,9 +52,12 @@ body{
  }
 p{
   font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
    color: #47088b;
    background-color: #a7a2aa;
    border: #47088b solid 3px;
    text-align: center;
    margin: 5px;
+ 
+ 
 }
